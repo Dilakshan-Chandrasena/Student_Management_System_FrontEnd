@@ -1,0 +1,56 @@
+#register-heading{
+    text-align: center;
+}
+
+body{
+    margin: auto;
+    margin-bottom: 20px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 50px 150px;
+    
+}
+
+#form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.success-message h1 {
+   
+    text-align: center;
+    color: green;
+}
+.success-message{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+#add-another-btn{
+    width: fit-content;
+
+}
+.success-message{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 25px;
+    text-align: center;
+    
+}
+.added-details{
+    display: flex;
+    justify-content: center;
+}
+table,tr,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+td{
+    padding: 10px 20px;
+}

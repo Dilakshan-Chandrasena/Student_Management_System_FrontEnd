@@ -1,0 +1,35 @@
+<br>
+<div id="all-students-container">
+    <table>
+        <thead>
+            <th>Student Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Adress</th>
+            <th>Degree</th>
+            <th>Update Student</th>
+            <th>Delete Student</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of allStudents">
+                <td>
+                    <a routerLink="list/{{student.id}}">{{student.id}}</a>
+                </td>
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.address}}</td>
+                <td>{{student.degree}}</td>
+                <td>
+                    <button class="btn btn-success">Update</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

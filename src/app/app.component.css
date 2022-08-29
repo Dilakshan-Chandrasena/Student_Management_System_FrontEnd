@@ -1,0 +1,31 @@
+.active{
+    color:white;
+    background-color:  none;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    /* background-color: rgb(121, 4, 4); */
+}
+li{
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    background-color:  rgb(225, 225, 225);
+    color: #2c4f83;
+    justify-content: space-between;
+    /* background: rgb(113,112,119);
+    background: linear-gradient(90deg, rgba(113,112,119,1) 0%, rgba(84,157,147,0.5583275546546744) 45%, rgba(65,28,6,0.4770950616574755) 100%); */
+}
+.links{   
+    margin-top:25px;
+    display: flex;
+    margin-right: 20px;
+   
+}
+li a{
+    padding-left: 10px;
+    text-decoration: none;
+  
+}

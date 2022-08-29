@@ -18,6 +18,9 @@ nav{
     /* background: rgb(113,112,119);
     background: linear-gradient(90deg, rgba(113,112,119,1) 0%, rgba(84,157,147,0.5583275546546744) 45%, rgba(65,28,6,0.4770950616574755) 100%); */
 }
+.title-container{
+    margin-left: 20px;
+}
 .links{   
     margin-top:25px;
     display: flex;

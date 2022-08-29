@@ -6,6 +6,9 @@
     display: flex;
     justify-content: center;
 }
+table{
+    width:1200px;
+}
 table,td,tr,th{
     border: 1px solid black;
     border-collapse: collapse;
@@ -17,4 +20,9 @@ td{
 
 button{
     font-size: small;
+}
+
+#searchBar{
+    margin-left: 76px;
+    width: fit-content;
 }

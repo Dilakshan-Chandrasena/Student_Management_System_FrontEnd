@@ -1,4 +1,7 @@
 <br>
+<input id="searchBar" [(ngModel)]="searchBy" type="text" class="form-control" placeholder="Search By Name">
+
+<br>
 <div id="all-students-container">
     <table>
         <thead>
@@ -12,7 +15,7 @@
             <th>Delete Student</th>
         </thead>
         <tbody>
-            <tr *ngFor="let student of allStudents">
+            <tr *ngFor="let student of allStudents | searchPipe:searchBy">
                 <td>
                     <a routerLink="list/{{student.id}}">{{student.id}}</a>
                 </td>

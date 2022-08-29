@@ -9,6 +9,7 @@ import { ViewStudentsService } from '../view-students.service';
 })
 export class ViewStudentsComponent implements OnInit {
   allStudents:any;
+  searchBy='';
   constructor(private viewStudentService:ViewStudentsService) { }
 
   ngOnInit(): void {

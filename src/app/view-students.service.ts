@@ -11,4 +11,8 @@ export class ViewStudentsService {
   public getAllStudents(){
     return this.http.get('http://localhost:8080/student/list');
   }
+
+  public deleteStudentById(id:any){
+    return this.http.delete('http://localhost:8080/student/delete/' + id);
+  }
 }

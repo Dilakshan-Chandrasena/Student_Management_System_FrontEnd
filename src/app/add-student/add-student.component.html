@@ -1,6 +1,11 @@
-<body>
-    <div>
-        <h1 id="register-heading" *ngIf="!isAdded">Student Registration</h1>
+<body >
+    <div class="add-student-head">
+        <div>
+            <img src="/assets/images/pic.png" alt="add-student" class="add-student-img">
+        </div>
+        <div>        
+            <h1 id="register-heading" *ngIf="!isAdded">Student Registration</h1>
+        </div>
     </div>
     <div class="container-fluid mb-5" id="form-container" *ngIf="!isAdded">
         <form action="" #studentForm="ngForm" >
@@ -40,7 +45,7 @@
               </div>
               <br>
             <div class="form-group" style="display: flex; justify-content: center;">
-                <button   [disabled]="studentForm.form.invalid || degreeHasError" type="submit" class="form-group" name="submit" id="submit" class="btn btn-success" (click)="addStudent()">Add Student</button>
+                <button   [disabled]="studentForm.form.invalid || degreeHasError" type="submit" class="form-group" name="submit" id="submit" class="btn btn-primary" (click)="addStudent()">Add Student</button>
             </div>
         </form>
     </div>

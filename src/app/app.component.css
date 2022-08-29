@@ -6,20 +6,28 @@
     text-decoration: none;
     /* background-color: rgb(121, 4, 4); */
 }
+
+#logo{
+    height: 75px;
+    width: 75px;
+}
 li{
     list-style: none;
 }
 
 nav{
     display: flex;
-    background-color:  rgb(225, 225, 225);
-    color: #2c4f83;
+    background-color:  rgb(6, 2, 37);
+    color: white;
     justify-content: space-between;
-    /* background: rgb(113,112,119);
-    background: linear-gradient(90deg, rgba(113,112,119,1) 0%, rgba(84,157,147,0.5583275546546744) 45%, rgba(65,28,6,0.4770950616574755) 100%); */
+
 }
 .title-container{
-    margin-left: 20px;
+    margin-left: 10px;   
+}
+
+.title-container small{
+    margin-top: -10px;
 }
 .links{   
     margin-top:25px;

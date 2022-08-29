@@ -9,7 +9,7 @@
             <th>Name</th>
             <th>Age</th>
             <th>Email</th>
-            <th>Adress</th>
+            <th>Address</th>
             <th>Degree</th>
             <th>Update Student</th>
             <th>Delete Student</th>
@@ -17,18 +17,18 @@
         <tbody>
             <tr *ngFor="let student of allStudents | searchPipe:searchBy">
                 <td>
-                    <a routerLink="list/{{student.id}}">{{student.id}}</a>
+                    <a  routerLink="list/{{student.id}}" style="text-decoration: none;"> <b> {{student.id}}</b></a>
                 </td>
                 <td>{{student.name}}</td>
                 <td>{{student.age}}</td>
-                <td>{{student.email}}</td>
+                <td><a  href="mailto:{{student.email}}">{{student.email}}</a></td>
                 <td>{{student.address}}</td>
                 <td>{{student.degree}}</td>
                 <td>
                     <button class="btn btn-success">Update</button>
                 </td>
                 <td>
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button>
                 </td>
 
             </tr>

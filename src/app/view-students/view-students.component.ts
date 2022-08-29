@@ -10,11 +10,18 @@ import { ViewStudentsService } from '../view-students.service';
 export class ViewStudentsComponent implements OnInit {
   allStudents:any;
   searchBy='';
+  message:any='';
   constructor(private viewStudentService:ViewStudentsService) { }
 
   ngOnInit(): void {
     this.viewStudentService.getAllStudents()
       .subscribe(data=>this.allStudents=data);
+  }
+
+  public deleteStudent(id:number){
+    this.viewStudentService.deleteStudentById(id)
+      .subscribe(data=> this.allStudents=data) 
+          
   }
 
 }

@@ -5,13 +5,14 @@ import { LoginComponent } from './login/login.component';
 import { ViewStudentsComponent } from './view-students/view-students.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"",pathMatch:"full", component:LoginComponent},
-  {path:"list",component:ViewStudentsComponent},
-  {path:"create", component:AddStudentComponent}
+  { path: 'login', pathMatch: 'full', component: LoginComponent },
+  { path: 'list', component: ViewStudentsComponent },
+  { path: 'create', component: AddStudentComponent },
+  { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

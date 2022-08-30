@@ -1,6 +1,9 @@
+
+
 #update-heading{
     text-align: center;
 }
+
 
 body{
     margin: auto;
@@ -18,4 +21,11 @@ body{
     height: 100px;
     width: 100px;
     margin-left: 150px;
+}
+table,td,tr,th{
+    border: 1px solid rgb(168, 161, 161);
+    border-collapse: collapse;
+}
+td{
+    padding: 5px 10px;
 }

@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+
+}
+body{
+    position : absolute; width: 100%; height: 100%;
+    background-color: rgb(6, 2, 37);
+    display: flex;
+    justify-content: center;
+
+}
+
+.login-form{  
+    margin-top: 150px;
+    margin-left: 50px;
+    text-align: center;
+    color: white;
+    height: 300px;
+    width: 300px;
+}
+.verticle-line{
+    margin-top: 150px;
+    border-left: 1px solid white;
+    height:250px;
+}
+
+.logo img{
+    margin-top: 150px;
+    margin-right: 50px;
+    height: 250px;
+    width: 250px;
+}

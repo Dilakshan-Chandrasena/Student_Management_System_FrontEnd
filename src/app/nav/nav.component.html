@@ -1,0 +1,27 @@
+<nav class="nav">
+  
+    <div >
+      <div style="display:flex;">
+        <img src="/assets/images/Logo.png" alt="logo" id="logo">
+        <div class="title-container">
+          <h2 id="head" class="heading">Student Management System</h2>
+          <small >London University</small>
+        </div>
+      </div>
+    </div>
+  
+    <div class="links">
+         <li>
+             <a id="uaddStudent" routerLink="/create" routerLinkActive="active">Add Student</a>
+         </li>
+       
+         <li>
+             <a id="viewAll" routerLink="/list" routerLinkActive="active">View All</a>
+         </li>
+
+          <li>
+            <a id="logout" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</a>
+          </li>
+    </div>
+  </nav>
+  

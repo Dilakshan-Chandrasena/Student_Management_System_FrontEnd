@@ -7,8 +7,10 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { ViewStudentsComponent } from './view-students/view-students.component';
-import { SearchPipePipe } from './search-pipe.pipe';
-import { UpdateStudentComponent } from './update-student/update-student.component'
+import { SearchPipePipe } from './pipes/search-pipe.pipe';
+import { UpdateStudentComponent } from './update-student/update-student.component';
+import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
     AddStudentComponent,
     ViewStudentsComponent,
     SearchPipePipe,
-    UpdateStudentComponent
+    UpdateStudentComponent,
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

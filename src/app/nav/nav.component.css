@@ -1,0 +1,42 @@
+.active{
+    color:white;
+    background-color:  none;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    /* background-color: rgb(121, 4, 4); */
+}
+
+#logo{
+    height: 75px;
+    width: 75px;
+}
+li{
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    background-color:  rgb(6, 2, 37);
+    color: white;
+    justify-content: space-between;
+
+}
+.title-container{
+    margin-left: 10px;   
+}
+
+.title-container small{
+    margin-top: -10px;
+}
+.links{   
+    margin-top:25px;
+    display: flex;
+    margin-right: 20px;
+   
+}
+li a{
+    padding-left: 10px;
+    text-decoration: none;
+  
+}

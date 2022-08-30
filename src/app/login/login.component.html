@@ -1,0 +1,29 @@
+
+<body>
+
+    <div class="logo">
+        <img src="/assets/images/Logo.png" alt="logo">
+    </div>
+    <div class="verticle-line"></div>
+    <div class="login-form">
+    <h2>Log In</h2>
+    <form action="login" #loginForm="ngForm" (ngSubmit)="login()">
+        <div class="form-group">
+            <input type="text" required #emailCheck="ngModel" class="form-control" name="email" [(ngModel)]="email" placeholder="Email">  
+            <small [class.d-none]="emailCheck.valid || emailCheck.untouched" class="text-danger">Email is required</small>
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="password" required #passwordCheck="ngModel" class="form-control" name="pw" [(ngModel)]="password" placeholder="Password">  
+            <small [class.d-none]="passwordCheck.valid || passwordCheck.untouched" class="text-danger">Password is required</small>
+        </div>
+        <br>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Login">
+        </div>
+    </form>
+    <br>
+        <p class="text-danger">{{loginFailed}}</p>
+
+    </div>
+</body>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from '../student';
-import { UpdateStudentService } from '../update-student.service';
+import { UpdateStudentService } from '../services/update-student.service';
 
 @Component({
   selector: 'app-update-student',
@@ -41,6 +41,8 @@ export class UpdateStudentComponent implements OnInit {
   public updateStudent(){
     this.updateService.updateStudent(this.student)
       .subscribe(data=>this.student=data)
+
+    this.isUpdated = true;  
   }
 
 }

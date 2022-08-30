@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <br>
 <input id="searchBar" [(ngModel)]="searchBy" type="text" class="form-control" placeholder="Search By Name">
 
@@ -8,6 +9,7 @@
             <th>Student Id</th>
             <th>Name</th>
             <th>Age</th>
+            <th>Gender</th>
             <th>Email</th>
             <th>Address</th>
             <th>Degree</th>
@@ -21,6 +23,7 @@
                 </td>
                 <td>{{student.name}}</td>
                 <td>{{student.age}}</td>
+                <td>{{student.gender}}</td>
                 <td><a  href="mailto:{{student.email}}">{{student.email}}</a></td>
                 <td>{{student.address}}</td>
                 <td>{{student.degree}}</td>

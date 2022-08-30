@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AddStudentService } from '../add-student.service';
+import { AddStudentService } from '../services/add-student.service';
 import { Student } from '../student';
 
 @Component({
@@ -17,6 +17,7 @@ export class AddStudentComponent implements OnInit {
   'Bsc in Business Information Systems'
   ]
   degreeHasError:boolean=true;
+
   studentModel: Student = new Student();
  
   message:any='';
@@ -34,6 +35,7 @@ export class AddStudentComponent implements OnInit {
   }
 
 
+
    public addStudent(){
       let resp =this.addStudentService.createStudentRec(this.studentModel);
       resp.subscribe((data)=>this.message=data);
@@ -44,6 +46,7 @@ export class AddStudentComponent implements OnInit {
   addAnotherStudent(){
     this.studentModel.name='';
     this.studentModel.age='';
+    this.studentModel.gender=''
     this.studentModel.email='';
     this.studentModel.address='';
     this.studentModel.degree='';

@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <body >
     <div class="add-student-head" *ngIf="!isAdded">
         <div>
@@ -21,6 +22,9 @@
                 <input type="text" required #age="ngModel"class="form-control" [class.is-invalid]="age.invalid && age.touched" name="age" id="age"  [(ngModel)]="studentModel.age">
                 <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
             </div>
+            <br>
+   
+
         
             <br>
             <div class="form-group">
@@ -33,6 +37,19 @@
                 <label for="address">Enter Address</label>
                 <input type="text" required class="form-control" #address="ngModel" name="address" id="address"  [(ngModel)]="studentModel.address" [class.is-invalid]='address.invalid && address.touched' >
                 <small  [class.d-none]="address.valid || address.untouched" class="text-danger">Address is required</small>
+            </div>
+            <br>
+            <label>Gender</label>
+            <div class="form-group" style="display: flex; ">
+                
+                <div class="form-check" style="margin-left: 20px;margin-right: 20px;">
+                  <input type="radio" required class="form-check-input" name="male" value="M" [(ngModel)]="studentModel.gender">
+                  <label class="form-check-label" for="text">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio"required  class="form-check-input" name="female" value="F" [(ngModel)]="studentModel.gender">
+                    <label class="form-check-label" for="text">Female</label>
+                  </div>
             </div>
             <br>
             <div class="form-group">
@@ -64,6 +81,10 @@
                 <tr>
                     <td><b>Age</b></td>
                     <td>{{studentModel.age}}</td>
+                </tr>
+                <tr>
+                    <td><b>Gender</b></td>
+                    <td>{{studentModel.gender}}</td>
                 </tr>
                 <tr>
                     <td><b>Email</b></td>

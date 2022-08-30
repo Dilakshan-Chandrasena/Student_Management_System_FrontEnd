@@ -17,7 +17,8 @@ export class AddStudentComponent implements OnInit {
   'Bsc in Business Information Systems'
   ]
   degreeHasError:boolean=true;
-  studentModel: Student = new Student('','','','','');
+  studentModel: Student = new Student();
+ 
   message:any='';
   isAdded=false;
   constructor(private addStudentService:AddStudentService) { }

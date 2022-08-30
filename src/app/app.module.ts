@@ -7,14 +7,16 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { ViewStudentsComponent } from './view-students/view-students.component';
-import { SearchPipePipe } from './search-pipe.pipe'
+import { SearchPipePipe } from './search-pipe.pipe';
+import { UpdateStudentComponent } from './update-student/update-student.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
     ViewStudentsComponent,
-    SearchPipePipe
+    SearchPipePipe,
+    UpdateStudentComponent
   ],
   imports: [
     BrowserModule,

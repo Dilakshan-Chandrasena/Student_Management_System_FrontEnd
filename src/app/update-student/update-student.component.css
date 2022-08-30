@@ -1,0 +1,21 @@
+#update-heading{
+    text-align: center;
+}
+
+body{
+    margin: auto;
+    margin-bottom: 20px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(168, 161, 161);
+    padding: 25px 150px;
+    
+}
+.update-student-img{
+    height: 100px;
+    width: 100px;
+    margin-left: 150px;
+}

@@ -20,25 +20,21 @@ export class LoginComponent implements OnInit {
   login(){
     this.authService.authorizeUser(this.email)
       .subscribe(data=> this.user=data)
-    
     this.check();
-    
-    
-
   }
 
   public check(){
-    
-    console.log(this.user);
     if(this.user !=null){
-      if(this.email === this.user.email && this.password === this.user.password){
+      if(this.password === this.user.password){
         localStorage.setItem('token',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
         this.user.role=="admin"? localStorage.setItem('userType','admin') : localStorage.setItem('userType','user');
   
         this.router.navigate(['list'])
+      }else{
+        this.loginFailed="Invalid Password"
       }
     }else{
-      this.loginFailed="Unauthorized Access";
+      this.loginFailed="Invalid Email or Password";
     }
 
   }

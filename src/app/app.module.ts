@@ -10,7 +10,9 @@ import { ViewStudentsComponent } from './view-students/view-students.component';
 import { SearchPipePipe } from './pipes/search-pipe.pipe';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { LoginComponent } from './login/login.component';
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './nav/nav.component';
+import { SearchByEmailPipe } from './pipes/search-by-email.pipe';
+import { SearchByDegreePipe } from './pipes/search-by-degree.pipe'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NavComponent } from './nav/nav.component'
     SearchPipePipe,
     UpdateStudentComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    SearchByEmailPipe,
+    SearchByDegreePipe
   ],
   imports: [
     BrowserModule,

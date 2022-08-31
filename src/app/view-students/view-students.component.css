@@ -41,8 +41,12 @@ td{
 button{
     font-size: small;
 }
-
-#searchBar{
+.filters-container{
+    display: flex;
+    justify-content: space-around;
+}
+.searchBar{
     margin-left: 76px;
     width: fit-content;
+    
 }

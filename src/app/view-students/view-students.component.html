@@ -1,7 +1,13 @@
 <app-nav></app-nav>
 <br>
-<input id="searchBar" [(ngModel)]="searchBy" type="text" class="form-control" placeholder="Search By Name">
-
+<div class="filters-container">
+<input  [(ngModel)]="searchByName" type="text" class="form-control searchBar" placeholder="Search By Name">
+<input  [(ngModel)]="searchByEmail" type="text" class="form-control searchBar" placeholder="Search By Email">
+<select class="form-control searchBar" name="degreeList" id="countryList" #degree="ngModel" [(ngModel)]="searchByDegree">
+    <option value="">Search By Degree</option>
+    <option *ngFor="let degree of degrees">{{degree}}</option>
+</select>
+</div>
 <br>
 <div id="all-students-container">
     <table>
@@ -17,7 +23,7 @@
             <th>Delete Student</th>
         </thead>
         <tbody>
-            <tr *ngFor="let student of allStudents | searchPipe:searchBy">
+            <tr *ngFor="let student of allStudents | searchPipe:searchByName | searchByEmail:searchByEmail | searchByDegree:searchByDegree">
                 <td>
                     <a  routerLink="list/{{student.id}}" style="text-decoration: none;"> <b> {{student.id}}</b></a>
                 </td>

@@ -2,16 +2,23 @@
 #register-heading{
     text-align: center;
 }
-
+#back{
+    
+    background-image: url('/assets/images/girl.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 body{
-    margin: auto;
+    /* margin: auto; */
+    background-color: rgba(255, 255, 255, 0.644);
+   
     margin-bottom: 20px;
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid rgb(168, 161, 161);
+    /* border: 1px solid rgb(168, 161, 161); */
     padding: 25px 150px;
     
 }
@@ -34,18 +41,22 @@ body{
 .success-message h1 {
    
     text-align: center;
-    color: green;
+    color: rgb(13, 13, 165);
 }
 .success-message{
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    width: 100%;
+    margin-left: 70px;
+
 }
 #add-another-btn{
     width: fit-content;
 
 }
 .success-message{
+
     display: flex; 
     flex-direction: column;
     justify-content: center;

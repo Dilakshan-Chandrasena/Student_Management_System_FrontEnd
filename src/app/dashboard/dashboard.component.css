@@ -1,0 +1,62 @@
+.background-container{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/backgroundStudents.jpg');
+    background-size: cover;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    
+
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+#total-students-card{
+    margin-left: 36%;
+
+}
+.card{
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+   padding-top: 30px;
+    margin: 10px;
+    width: 350px;
+    height: 150px;
+    background:  rgba(0, 0, 0, 0.7);
+
+    /* rgb(13, 4, 79,0.65); */
+    /* rgba(9, 3, 59, 0.65); */
+}
+.card h3{
+    font-size: 24px;
+}
+#insights{
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+
+}
+#seperator{
+    border-bottom: 2px solid white ;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 0.3;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
@@ -10,6 +11,7 @@ import { ViewStudentsComponent } from './view-students/view-students.component';
 const routes: Routes = [
   {path:"",redirectTo:"login",pathMatch:"full"},
   {path:"login",component:LoginComponent},
+  {path:"dashboard",component:DashboardComponent,canActivate:[AuthGuard]},
   {path:"main",component:NavComponent,canActivate:[AuthGuard]},
   {path:"list",component:ViewStudentsComponent,canActivate:[AuthGuard]},
   {path:"create", component:AddStudentComponent,canActivate:[AuthGuard]},

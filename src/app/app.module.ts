@@ -12,7 +12,8 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
 import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { SearchByEmailPipe } from './pipes/search-by-email.pipe';
-import { SearchByDegreePipe } from './pipes/search-by-degree.pipe'
+import { SearchByDegreePipe } from './pipes/search-by-degree.pipe';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SearchByDegreePipe } from './pipes/search-by-degree.pipe'
     LoginComponent,
     NavComponent,
     SearchByEmailPipe,
-    SearchByDegreePipe
+    SearchByDegreePipe,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

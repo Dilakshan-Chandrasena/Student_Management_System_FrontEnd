@@ -4,7 +4,7 @@
 <input  [(ngModel)]="searchByName" type="text" class="form-control searchBar" placeholder="Search By Name">
 <input  [(ngModel)]="searchByEmail" type="text" class="form-control searchBar" placeholder="Search By Email">
 <select class="form-control searchBar" name="degreeList" id="countryList" #degree="ngModel" [(ngModel)]="searchByDegree">
-    <option value="">Search By Degree</option>
+    <option value="" >Search By Degree</option>
     <option *ngFor="let degree of degrees">{{degree}}</option>
 </select>
 </div>

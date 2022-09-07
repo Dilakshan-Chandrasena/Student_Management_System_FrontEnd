@@ -1,105 +1,107 @@
 <app-nav></app-nav>
-<body>
-    <div class="update-student-head" *ngIf="!isUpdated">
-        <div>
-            <img src="/assets/images/pic.png" alt="update-student" class="update-student-img">
-        </div>
-        <div>        
-            <h1 id="update-heading" *ngIf="!isUpdated">Update Student Details</h1>
-        </div>
-    </div>
-
-    <div class="container-fluid mb-5" id="form-container" *ngIf="!isUpdated">
-        <form action="" #studentForm="ngForm" >
-            <div class="form-group">
-                <label for="text">Enter Full Name</label>
-                <input type="text" required #name="ngModel"  [class.is-invalid]='name.invalid && name.touched' class="form-control" name="name" [(ngModel)]="student.name" placeholder="student.name">  
-                <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required</small>
+<div id="back">
+    <body>
+        <div class="update-student-head">
+            <div>
+                <img src="/assets/images/pic.png" alt="update-student" class="update-student-img">
             </div>
-
-            <br>
-            <div class="form-group">
-                <label for="age">Enter Age</label>
-                <input type="text" required #age="ngModel"class="form-control" [class.is-invalid]="age.invalid && age.touched" name="age" id="age"  [(ngModel)]="student.age">
-                <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
+            <div>        
+                <h1 id="update-heading" *ngIf="!isUpdated">Update Student Details</h1>
             </div>
-            <br>
-            <label>Gender</label>
-            <div class="form-group" style="display: flex; ">
-                
-                <div class="form-check" style="margin-left: 20px;margin-right: 20px;">
-                  <input type="radio" required class="form-check-input" name="male" value="M" [(ngModel)]="student.gender">
-                  <label class="form-check-label" for="text">Male</label>
+        </div>
+    
+        <div class="container-fluid mb-5" id="form-container" *ngIf="!isUpdated">
+            <form action="" #studentForm="ngForm" >
+                <div class="form-group">
+                    <label for="text">Enter Full Name</label>
+                    <input type="text" required #name="ngModel"  [class.is-invalid]='name.invalid && name.touched' class="form-control" name="name" [(ngModel)]="student.name" placeholder="student.name">  
+                    <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required</small>
                 </div>
-                <div class="form-check">
-                    <input type="radio" required class="form-check-input" name="female" value="F" [(ngModel)]="student.gender">
-                    <label class="form-check-label" for="text">Female</label>
-                  </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="email">Enter Email</label>
-                <input type="email" class="form-control" required  [class.is-invalid]="email.invalid && email.touched" name="email" [(ngModel)]="student.email" #email="ngModel"> 
-                <small [class.d-none]="email.valid || email.untouched" class="text-danger">Email is required</small>
-            </div>
-
-            <br>
-            <div class="form-group">
-                <label for="address">Enter Address</label>
-                <input type="text" required class="form-control" #address="ngModel" name="address" id="address"  [(ngModel)]="student.address" [class.is-invalid]='address.invalid && address.touched' >
-                <small  [class.d-none]="address.valid || address.untouched" class="text-danger">Address is required</small>
-            </div>
-
-            <br>
-            <div class="form-group">
-                <select class="form-select" (blur)="validateDegree(degree.value)" (change)="validateDegree(degree.value)" #degree="ngModel"  [class.is-invalid]="degreeHasError && degree.touched" [(ngModel)]="student.degree" name="degrees">
-                    <option value="" disabled>Select Degree</option>
+    
+                <br>
+                <div class="form-group">
+                    <label for="age">Enter Age</label>
+                    <input type="text" required #age="ngModel"class="form-control" [class.is-invalid]="age.invalid && age.touched" name="age" id="age"  [(ngModel)]="student.age">
+                    <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
+                </div>
+                <br>
+                <label>Gender</label>
+                <div class="form-group" style="display: flex; ">
                     
-                  <option *ngFor="let degree of degrees">{{degree}}</option>
-                </select> 
-                <small [class.d-none]="!degreeHasError || degree.untouched"  class="text-danger">Please choose a degree</small>
+                    <div class="form-check" style="margin-left: 20px;margin-right: 20px;">
+                      <input type="radio" required class="form-check-input" name="male" value="M" [(ngModel)]="student.gender">
+                      <label class="form-check-label" for="text">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" required class="form-check-input" name="female" value="F" [(ngModel)]="student.gender">
+                        <label class="form-check-label" for="text">Female</label>
+                      </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email">Enter Email</label>
+                    <input type="email" class="form-control" required  [class.is-invalid]="email.invalid && email.touched" name="email" [(ngModel)]="student.email" #email="ngModel"> 
+                    <small [class.d-none]="email.valid || email.untouched" class="text-danger">Email is required</small>
+                </div>
+    
+                <br>
+                <div class="form-group">
+                    <label for="address">Enter Address</label>
+                    <input type="text" required class="form-control" #address="ngModel" name="address" id="address"  [(ngModel)]="student.address" [class.is-invalid]='address.invalid && address.touched' >
+                    <small  [class.d-none]="address.valid || address.untouched" class="text-danger">Address is required</small>
+                </div>
+    
+                <br>
+                <div class="form-group">
+                    <select class="form-select" (blur)="validateDegree(degree.value)" (change)="validateDegree(degree.value)" #degree="ngModel"  [class.is-invalid]="degreeHasError && degree.touched" [(ngModel)]="student.degree" name="degrees">
+                        <option value="" disabled>Select Degree</option>
+                        
+                      <option *ngFor="let degree of degrees">{{degree}}</option>
+                    </select> 
+                    <small [class.d-none]="!degreeHasError || degree.untouched"  class="text-danger">Please choose a degree</small>
+                </div>
+                <br>
+                <div class="form-group" style="display: flex; justify-content: center;">
+                    <button   type="submit" class="form-group" name="submit" id="submit" class="btn btn-primary" (click)="updateStudent()">Update</button>
+                </div>
+            </form>
+    
+        </div>
+    
+        <div class="success-message" *ngIf="isUpdated">
+            <div class="text-primary">
+                <h1>Successfully Updated</h1>
             </div>
             <br>
-            <div class="form-group" style="display: flex; justify-content: center;">
-                <button   type="submit" class="form-group" name="submit" id="submit" class="btn btn-primary" (click)="updateStudent()">Update</button>
+            <div class="updated-details">
+                <table >
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td>{{student.name}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Age</b></td>
+                        <td>{{student.age}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>{{student.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Email</b></td>
+                        <td>{{student.email}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Address</b></td>
+                        <td>{{student.address}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Degree</b></td>
+                        <td>{{student.degree}}</td>
+                    </tr>
+                </table>
             </div>
-        </form>
-
-    </div>
-
-    <div class="success-message" *ngIf="isUpdated">
-        <div class="text-success">
-            <h1>Successfully Updated</h1>
-        </div>
-        <br>
-        <div class="updated-details">
-            <table >
-                <tr>
-                    <td><b>Name</b></td>
-                    <td>{{student.name}}</td>
-                </tr>
-                <tr>
-                    <td><b>Age</b></td>
-                    <td>{{student.age}}</td>
-                </tr>
-                <tr>
-                    <th>Gender</th>
-                    <td>{{student.gender}}</td>
-                </tr>
-                <tr>
-                    <td><b>Email</b></td>
-                    <td>{{student.email}}</td>
-                </tr>
-                <tr>
-                    <td><b>Address</b></td>
-                    <td>{{student.address}}</td>
-                </tr>
-                <tr>
-                    <td><b>Degree</b></td>
-                    <td>{{student.degree}}</td>
-                </tr>
-            </table>
-        </div>
-        <br>
-    </div> 
-</body>
+            <br>
+        </div> 
+    </body>
+</div>

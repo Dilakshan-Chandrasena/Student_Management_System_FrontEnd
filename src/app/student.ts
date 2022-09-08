@@ -4,6 +4,7 @@ export class Student{
     public age:string='';
     public gender:string='';
     public email:string='';
+    public contactNum:string=''
     public address:string='';
     public degree:string='';
     constructor(

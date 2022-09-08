@@ -48,6 +48,7 @@ export class AddStudentComponent implements OnInit {
     this.studentModel.age='';
     this.studentModel.gender=''
     this.studentModel.email='';
+    this.studentModel.contactNum='';
     this.studentModel.address='';
     this.studentModel.degree='';
     this.isAdded=false;

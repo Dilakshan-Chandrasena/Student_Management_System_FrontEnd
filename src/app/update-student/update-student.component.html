@@ -43,7 +43,12 @@
                     <input type="email" class="form-control" required  [class.is-invalid]="email.invalid && email.touched" name="email" [(ngModel)]="student.email" #email="ngModel"> 
                     <small [class.d-none]="email.valid || email.untouched" class="text-danger">Email is required</small>
                 </div>
-    
+                <br>
+                <div class="form-group">
+                    <label for="mobile">Enter Contact Number</label>
+                    <input type="text" class="form-control" required pattern="^\d{10}$"  [class.is-invalid]="mobile.invalid && mobile.touched" name="mobile" [(ngModel)]="student.contactNum" #mobile="ngModel"> 
+                    <small [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Contact number is required and must be 10 digits</small>
+                </div>
                 <br>
                 <div class="form-group">
                     <label for="address">Enter Address</label>
@@ -84,12 +89,16 @@
                         <td>{{student.age}}</td>
                     </tr>
                     <tr>
-                        <th>Gender</th>
+                        <td><b>Gender</b></td>
                         <td>{{student.gender}}</td>
                     </tr>
                     <tr>
                         <td><b>Email</b></td>
                         <td>{{student.email}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Contact Number</b></td>
+                        <td>{{student.contactNum}}</td>
                     </tr>
                     <tr>
                         <td><b>Address</b></td>

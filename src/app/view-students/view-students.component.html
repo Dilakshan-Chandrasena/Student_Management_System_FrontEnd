@@ -1,5 +1,6 @@
 <app-nav></app-nav>
 <br>
+<!-- fillters-container div contains all the filter options -->
 <div class="filters-container">
 <input  [(ngModel)]="searchByName" type="text" class="form-control searchBar" placeholder="Search By Name">
 <input  [(ngModel)]="searchByEmail" type="text" class="form-control searchBar" placeholder="Search By Email">
@@ -9,6 +10,7 @@
 </select>
 </div>
 <br>
+<!-- all the student details in tabular format -->
 <div id="all-students-container">
     <table>
         <thead>

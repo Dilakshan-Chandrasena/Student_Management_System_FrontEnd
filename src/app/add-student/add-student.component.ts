@@ -9,7 +9,7 @@ import { Student } from '../student';
   styleUrls: ['./add-student.component.css']
 })
 export class AddStudentComponent implements OnInit {
-
+// List of degrees available in the program
   degrees=['Bsc in Computer Science',
   'Bsc in Software Engineering',
   'Bsc in Aritificial Intelligence',
@@ -17,9 +17,7 @@ export class AddStudentComponent implements OnInit {
   'Bsc in Business Information Systems'
   ]
   degreeHasError:boolean=true;
-
   studentModel: Student = new Student();
- 
   message:any='';
   isAdded=false;
   constructor(private addStudentService:AddStudentService) { }
@@ -33,16 +31,12 @@ export class AddStudentComponent implements OnInit {
       this.degreeHasError = false;
     }
   }
-
-
-
    public addStudent(){
       let resp =this.addStudentService.createStudentRec(this.studentModel);
       resp.subscribe((data)=>this.message=data);
       this.isAdded=true;
 
   }
-
   addAnotherStudent(){
     this.studentModel.name='';
     this.studentModel.age='';

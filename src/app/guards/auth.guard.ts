@@ -8,6 +8,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class AuthGuard implements CanActivate {
   constructor(private authService:AuthService,private router:Router){}
+  // check if the user logged in and redirecting to the authorized pages
   canActivate(){
     if(this.authService.isLoggedIn()){
       return true;

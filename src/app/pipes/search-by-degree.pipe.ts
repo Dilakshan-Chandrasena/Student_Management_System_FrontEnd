@@ -7,6 +7,7 @@ import { Student } from '../student';
 export class SearchByDegreePipe implements PipeTransform {
 
   transform(value:any,selectedDegree:any) {
+    // returns an array of student details based on the selected degree
     if(selectedDegree==''){
       return value;
     }

@@ -15,13 +15,14 @@ export class ViewStudentsComponent implements OnInit {
   'Bsc in Business Information Systems'
   ]
   allStudents:any;
+  // variables to filter student details
   searchByName='';
   searchByEmail='';
   searchByDegree='';
-  message:any='';
   constructor(private viewStudentService:ViewStudentsService) { }
 
   ngOnInit(): void {
+    // All the student details will be assigned to allStudents variable
     this.viewStudentService.getAllStudents()
       .subscribe(data=>this.allStudents=data);
   }

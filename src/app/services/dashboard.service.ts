@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class DashboardService {
 
   constructor(private http:HttpClient) { }
-
+// Getting all the student counts using GET requests and returing the retrieved counts
   public getStudentCount(){
     return this.http.get("http://localhost:8080/student/studentCount");
   }

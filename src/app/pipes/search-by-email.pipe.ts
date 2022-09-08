@@ -7,6 +7,7 @@ import { Student } from '../student';
 export class SearchByEmailPipe implements PipeTransform {
 
   transform(value:any, selectedEmail:any) {
+        // returns an array of student details based on the selected email
     if(selectedEmail == ''){
       return value;
     }

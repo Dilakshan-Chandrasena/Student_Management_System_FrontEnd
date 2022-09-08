@@ -1,3 +1,4 @@
+// Blueprint to create user objects while logging
 export class User{
 
     constructor(

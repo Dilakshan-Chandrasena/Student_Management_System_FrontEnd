@@ -1,6 +1,8 @@
+<!-- nav component -->
 <app-nav></app-nav>
 <div id="back">
     <body>
+        <!-- student registration form -->
         <div class="add-student-head" *ngIf="!isAdded">
             <div>
                 <img src="/assets/images/pic.png" alt="add-student" class="add-student-img">
@@ -24,8 +26,6 @@
                     <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
                 </div>
                 <br>
-       
-    
             
                 <br>
                 <div class="form-group">
@@ -73,6 +73,7 @@
                 </div>
             </form>
         </div>
+        <!-- success message div will appear once the registration form is submitted -->
         <div class="success-message" *ngIf="isAdded">
             <div>
                 <h1>{{message}}</h1>

@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
   constructor(private dashboardService:DashboardService) { }
 
   ngOnInit(): void {
+    // getting all the relevant student counts from the database and assigning
     this.dashboardService.getStudentCount()
       .subscribe(data => this.totalStudents =data);
 

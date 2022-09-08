@@ -11,6 +11,7 @@ export class SearchPipePipe implements PipeTransform {
       return value;
     }
     const students:Student[]=[];
+        // returns an array of student details based on the selected name
     for (let i = 0; i < value.length; i++) {
       let studentName =value[i].name.toLowerCase() ;
      

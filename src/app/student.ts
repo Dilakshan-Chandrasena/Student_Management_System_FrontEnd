@@ -1,3 +1,4 @@
+// Blueprint to create student objects
 export class Student{
     public studentId:any;
     public name:string='';

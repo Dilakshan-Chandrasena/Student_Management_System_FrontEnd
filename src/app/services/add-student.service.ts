@@ -8,9 +8,9 @@ import { Student } from '../student';
 export class AddStudentService {
 
   constructor(private http:HttpClient) { }
-
+// radding a student to the database using POST request. returs a message from the database
   public createStudentRec(student:Student){
-    let something =this.http.post('http://localhost:8080/student/create',student,{responseType:'text' as 'json'});
-    return something;
+    let message =this.http.post('http://localhost:8080/student/create',student,{responseType:'text' as 'json'});
+    return message;
   }
 }
